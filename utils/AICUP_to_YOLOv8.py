@@ -52,7 +52,7 @@ def aicup_to_yolo(args):
     valid_files = image_files[train_count:]
     
     for src_path in tqdm(train_files + valid_files, desc=f'copying data'):
-        text = src_path.split('\\')
+        text = src_path.split(os.sep)
         timestamp = text[-2]
         camID_frameID = text[-1]
         
